@@ -81,7 +81,7 @@ namespace TM_InnerJoin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Extends language combination by performing an inner JOIN with a TM containing one language pair in common.
+        ///   Looks up a localized string similar to Extends language combination by performing an inner JOIN with TMs containing one language pair in common.
         /// </summary>
         public static string Plugin_Description {
             get {
@@ -108,7 +108,7 @@ namespace TM_InnerJoin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Extends language combination by performing an inner JOIN with a TM containing one language pair in common.
+        ///   Looks up a localized string similar to Extends language combination by performing an inner JOIN with TMs containing one language pair in common.
         /// </summary>
         public static string Plugin_Tooltip {
             get {
