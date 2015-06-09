@@ -108,6 +108,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PluginResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SearchHelper.cs" />
     <Compile Include="TranslationOptions.cs" />
     <Compile Include="TranslationProvider.cs" />
     <Compile Include="TranslationProviderCredentialHelper.cs" />
