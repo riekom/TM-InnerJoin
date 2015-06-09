@@ -90,19 +90,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connector.cs" />
+    <Compile Include="ProviderConfDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderConfDialog.designer.cs">
+      <DependentUpon>ProviderConfDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectServerTM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectServerTM.designer.cs">
+      <DependentUpon>frmSelectServerTM.cs</DependentUpon>
+    </Compile>
     <Compile Include="PluginResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PluginResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ProviderConfDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProviderConfDialog.Designer.cs">
-      <DependentUpon>ProviderConfDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="TranslationOptions.cs" />
     <Compile Include="TranslationProvider.cs" />
+    <Compile Include="TranslationProviderCredentialHelper.cs" />
     <Compile Include="TranslationProviderElementVisitor.cs" />
     <Compile Include="TranslationProviderFactory.cs" />
     <Compile Include="TranslationProviderWinFormsUI.cs" />
@@ -113,6 +121,12 @@
   <ItemGroup>
     <Content Include="icon.ico" />
     <Content Include="icon.png" />
+    <EmbeddedResource Include="ProviderConfDialog.resx">
+      <DependentUpon>ProviderConfDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectServerTM.resx">
+      <DependentUpon>frmSelectServerTM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PluginResources.fr.resx" />
     <EmbeddedResource Include="PluginResources.resx">
       <SubType>Designer</SubType>
@@ -155,11 +169,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ProviderConfDialog.resx">
-      <DependentUpon>ProviderConfDialog.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
