@@ -29,20 +29,20 @@ namespace TM_InnerJoin
         /// </summary>
         private void UpdateDialog()
         {
-            //TODO: if saving/storing of credentials is added, try getting them if the ones in the options are blank, and load them into the form if they exist
+            //NICE_TO_HAVE: if saving/storing of credentials is added, try getting them if the ones in the options are blank, and load them into the form if they exist
 
             txtTm1Path.Text = Options.ServerFullPathTm1;
             txtTm2Path.Text = Options.ServerFullPathTm2;
             comboLanguagePairsTm1.Text = Options.LangDirString1;
             comboLanguagePairsTm2.Text = Options.LangDirString2;
-            //TODO: for both TMs, if it's server based...try a lookup to refresh the list and select the one that was previously selected
+            
             if(Options.IsServerTm1)
             {
-                //TODO: do a connect to get list and select based on index.....but only if the options have already been set...or maybe just add a refresh button instead of doing it on forom load
+                //NICE_TO_HAVE: do a connect to get list and select based on index.....but only if the options have already been set...or maybe just add a refresh button instead of doing it on forom load
             }
             if (Options.IsServerTm2)
             {
-                //TODO: do a connect to get list and select based on index.....but only if the options have already been set...or maybe just add a refresh button instead of doing it on forom load
+                //NICE_TO_HAVE: do a connect to get list and select based on index.....but only if the options have already been set...or maybe just add a refresh button instead of doing it on forom load
             }
         }
        
@@ -94,7 +94,7 @@ namespace TM_InnerJoin
                 if(tmNumber==1)
                 {
                     Options.IsServerTm1 = false;
-                    Options.NameTm1 = null; //TODO: null options values when not used???
+                    Options.NameTm1 = null; //POSSIBLE_BUG: null options values when not used???
                     Options.ServerUriTm1 = tmFilename;
                     Options.UsernameTm1 = null;
                     Options.PasswordTm1 = null;
@@ -102,7 +102,7 @@ namespace TM_InnerJoin
                 else
                 {
                     Options.IsServerTm2 = false;
-                    Options.NameTm2 = null; //TODO: null options values when not used???
+                    Options.NameTm2 = null; //POSSIBLE_BUG: null options values when not used???
                     Options.ServerUriTm2 = tmFilename;
                     Options.UsernameTm2 = null;
                     Options.PasswordTm2 = null;
@@ -130,7 +130,7 @@ namespace TM_InnerJoin
                 Connector connect = new Connector();
 
                 //need to set options here for username, etc...
-                //TODO: if we add storing/retrieving of credentials, then need to save credentials to the store...possibly here...or do it with save/delete button/s in the child form
+                //NICE_TO_HAVE: if we add storing/retrieving of credentials, then need to save credentials to the store...possibly here...or do it with save/delete button/s in the child form
                 if(tmNumber==1)
                 {
                     Options.IsServerTm1 = true;
@@ -175,7 +175,8 @@ namespace TM_InnerJoin
         
         private void btnOK_Click(object sender, EventArgs e)
         {
-            //TODO: validate to check whether all necessary options have been set before clicking ok in the form
+            //NICE_TO_HAVE: validate to check whether all necessary options have been set before clicking ok in the form
+            //NICE_TO_HAVE: validate to make sure TMs meet the requirements
 
             //set any options that haven't been set already
             Options.LangDirString1 = comboLanguagePairsTm1.Text;

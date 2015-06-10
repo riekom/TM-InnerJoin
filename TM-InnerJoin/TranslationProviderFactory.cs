@@ -22,7 +22,7 @@ namespace TM_InnerJoin
 
         #region "CreateTranslationProvider"
 
-        //TODO:check credentials if necessary
+        //NICE_TO_HAVE:check credentials if necessary
         public ITranslationProvider CreateTranslationProvider(Uri translationProviderUri, string translationProviderState, ITranslationProviderCredentialStore credentialStore)
         {
             if (!SupportsTranslationProviderUri(translationProviderUri))

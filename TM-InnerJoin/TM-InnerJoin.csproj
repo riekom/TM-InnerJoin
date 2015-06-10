@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connector.cs" />
+    <Compile Include="GenericTranslationMemory.cs" />
     <Compile Include="ProviderConfDialog.cs">
       <SubType>Form</SubType>
     </Compile>

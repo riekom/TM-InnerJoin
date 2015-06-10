@@ -14,7 +14,6 @@ namespace TM_InnerJoin
     public class TranslationOptions
     {
         #region "TranslationMethod"
-        //TODO: set the translation method here for the type of translation provider
         public static readonly TranslationMethod ProviderTranslationMethod = TranslationMethod.Other;
         #endregion
 

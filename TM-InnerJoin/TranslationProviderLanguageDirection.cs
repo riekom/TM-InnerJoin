@@ -37,7 +37,6 @@ namespace TM_InnerJoin
             _visitor = new TranslationProviderElementVisitor(_options);
             #endregion
 
-            //TODO: any instantiation code for ILanguageDirection
         }
 
         #endregion
@@ -67,7 +66,7 @@ namespace TM_InnerJoin
         #region "SearchSegment"
         public SearchResults SearchSegment(SearchSettings settings, Segment segment)
         {
-            //TODO: If necessary, the ElementVisitor class can be used to loop through all the segment elements and decide what to do with the different kinds of elements
+            //If necessary, the ElementVisitor class can be used to loop through all the segment elements and decide what to do with the different kinds of elements
             //e.g. to 'filter out' certain placeables, as follows (uncomment below and change the code in the ElementVisitor class
             //to simply strip the tags and use everything as text, Segment.ToPlain() can be used
             //to keep the tag markup Segment.ToString() can be used
@@ -79,7 +78,7 @@ namespace TM_InnerJoin
             //}
             #endregion
 
-            //TODO: if access to the translation unit object is needed here, create a class variable above to hold it and assign the variable before the SearchSegments method (where it's available) calls this method
+            //if access to the translation unit object is needed here, create a class variable above to hold it and assign the variable before the SearchSegments method (where it's available) calls this method
             // this will allow, e.g., checking the confirmation status of the TU.
             //it can't be passed as an argument because this is an interface method and the signature can't be changed
 
@@ -104,7 +103,7 @@ namespace TM_InnerJoin
             #endregion
 
 
-            //TODO: if concordance is needed and has to be implemented separately, implement the above code with conditional for translation, as well as below for concordance search(es)
+            //if concordance is needed and has to be implemented separately, implement the above code with conditional for translation, as well as below for concordance search(es)
             //e.g. if (settings.Mode == SearchMode.ConcordanceSearch)
             //and/or if (settings.Mode == SearchMode.TargetConcordanceSearch)
             //note..concordance is plain text only, without tag markup and with everything else as plain text
